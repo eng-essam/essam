@@ -1,0 +1,599 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:5000px;
+    background-color:rgb(191 191 191 / 13%);
+
+}
+.clear{
+    clear: both;
+}
+/*------------Start Header-----------------*/
+header{
+    
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(0, 0,0,0.5);
+}
+.container{
+    width: 1001px;
+    margin: auto;
+}
+
+header .container .logo img{
+    float: left;
+    width: 90px;
+    height: 40px;
+    margin-top:5px;
+    border: 1px solid white;
+    border-radius: 7px;
+    transition:box-shadow 0.5s ;
+}
+header .container .logo img:hover{
+    border: 1px solid white; 
+    border-radius: 7px;
+    box-shadow: 0px 3px 7px white ,
+    0px -3px 7px white;
+    text-shadow: 0px 3px 7px white ,
+    0px -3px 7px white;;
+ }
+header .container .nav  ul{
+    float: right;
+    list-style: none;
+}
+header .container .nav ul  li {
+    display: inline-block;
+}
+header .container .nav  ul  li  a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 17px 10px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: text-shadow 0.5s;
+}
+header .container .nav  ul  li  a.active:after,
+header .container .nav  ul  li a:after{
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.7s;   
+}
+header .container .nav ul  li  a.active:after{
+    width:100%;
+}
+header .container .nav  ul  li  a:after
+{
+    width: 0;
+}
+header .container .nav  ul  li  a:hover::after{
+    width: 100%;
+    border: 0.0px solid white; 
+    box-shadow: 0px 3px 7px white ;
+
+}
+header .container .nav  ul  li  a:hover{
+
+   text-shadow: 0px 3px 7px white ,
+   0px -3px 7px  white;;
+}
+
+/*-------------------End Header----------------*/
+/*---------------------Start Home--------------------*/
+
+
+.home{
+    height: 600px;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0,0,0.7);
+}
+.home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+   
+}
+.home-content .title{
+    font-size: 40px;
+    text-transform:uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:5px 5px 20px 5px;
+    text-shadow: 7px 7px 5px black;
+    padding-bottom: 10px;
+    box-shadow: 0px 3px 5px white ,
+                0px -3px 5px white;
+    border-bottom: 2px  solid rgb(255, 255, 255);
+    border-top: 2px  solid rgb(255, 255, 255);
+}
+.home-content .home-desc{
+    font-size: 20px;
+    word-spacing: 3px;
+    margin-bottom: 15px;
+}
+.home-content .both{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity .5s;
+}
+.home-content .both:hover{
+    opacity: 0.8;
+}
+
+/*-------------------End Home----------------*/
+
+/*-------------------Start section welcome to website----------*/
+ .container .container-section{
+    margin-top: 70px;
+    padding:10px 0 10px 0 ;
+    flex-wrap: wrap;
+    width: inherit;
+ }
+ .container-section .section-head{
+    text-align: center;
+    margin:0px auto 50px auto;
+    width:min-content;
+ }
+ .container-section .section-head .title{
+    font-size: 35px;
+    width:max-content;
+    padding: 5px;
+    margin:0px auto 5px auto;
+    text-transform:capitalize; 
+    }
+ .container-section .section-head .line
+ {
+    display: block;
+    background-color: blue;
+    width:30%;
+    height: 3px;
+    margin: auto;
+    transition:width 0.3s ;
+ }
+ .container-section .section-head:hover .line{
+    width:100%;
+ }
+.container .container-section .section-divs{
+    display: flex;
+}
+.section-divs .divs{ 
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #e8e8e8;   
+}
+.section-divs .divs-mid{
+    margin:0px 20px 0px 20px ;
+}
+.section-divs .divs .icon{
+    color: blue;
+    margin-bottom: 10px;
+}
+.section-divs .divs h2{
+    margin-bottom: 15px;
+    text-transform:capitalize;
+}
+
+.section-divs .divs p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: rgb(24, 22, 22);
+    text-transform:capitalize;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.section-divs .divs a{
+    text-transform:capitalize;
+    text-decoration: none;
+    color:rgb(55, 55, 211);
+    font-size: 15px;
+}
+.divs-effect{
+position: relative;
+}
+.divs-effect:after{
+position: absolute;
+content: "";
+background:rgb(0, 0, 0);
+width: 0;
+bottom: 0;
+right: 0;
+top: 0;
+left: 0;
+z-index:-1;
+transition: width 0.9s;
+}
+.divs-effect:hover:after{
+    width:100%;
+}
+.section-divs .divs:hover h2{
+color: rgb(255, 255, 255);
+}
+.section-divs .divs:hover p{
+    color: rgb(255, 255, 255);
+}
+/*-------------------End section welcome to website-------*/
+/*-------------------Start section featured works----------*/
+/*-------------------Start section web developer --------*/
+.container-section .developer{
+    border: 1px solid rgb(197, 197, 197);
+     height: 413px;
+     
+ }
+ .developer .developer-header-info {
+     width: 45%;
+     float: left;
+     padding: 5PX;
+     
+ }
+ .developer .developer-header-info .developer-info{
+     display: flex;
+     width:320PX;
+     height: 70px;
+     border-left:5px solid blue;
+     border-bottom:2px solid blue;
+     position: relative;
+ }
+ .developer-header-info .developer-info img{
+     width: 60px;
+     height: 60px;
+     border: 3px solid blue;
+     border-radius: 30px;
+     display: inline;
+     margin: 5px;
+ }
+ .developer-header-info .developer-info h2{
+     margin-top: 20px;
+     font-size: 18px;
+     text-transform: capitalize;
+     transition: color 0.9s;
+ }
+ .developer-header-info ul{
+     list-style: none;
+     margin-top: 50px;
+ }
+ .developer-header-info ul li{
+     text-transform: capitalize;
+     margin-bottom:30px;
+ }
+ .developer-header-info ul li i{
+     color: rgb(4, 0, 255);
+     margin-right: 5px;
+ }
+ 
+ .developer .developer-img{
+     float: right;
+     width: 50%;
+     margin: 5px;
+     position: relative;
+ }
+ .developer .developer-img img{
+     width:500px;
+     height:400px;
+     float: right;
+     padding: 3px;
+     border: 1px solid blue;
+ }
+ 
+ .developer-info-effect:after{
+ position: absolute;
+ content: "";
+ background:rgb(47, 0, 255);
+ width: 0;
+ bottom: 0;
+ right: 0;
+ top: 0;
+ left: 0;
+ z-index:-1;
+ transition: width 0.9s;
+ }
+ .developer-info:hover:after{
+     width:100%;
+ }
+ .developer-info:hover h2{
+     color: white;
+ }
+ .developer-img .developer-effect
+ {
+     position: absolute;
+     background-color: rgba(0, 0,0,0.3);
+     width: 0;
+     height: 100%;
+     top: 0;
+     left: 0; 
+     
+ }
+ .developer .developer-img:hover .developer-effect{
+     width:100%;  
+ }
+ .developer-img .developer-effect .developer-img-effect{
+     width:min-content;
+     height:min-content;
+     opacity: 0;
+     visibility: hidden;
+     transition:opacity 1s ;
+     transition:margin 0.5s ;
+ 
+ }
+ .developer-img .developer-effect .developer-img-effect a{
+     display: block;  
+     color: rgb(255, 255, 255);
+     margin-bottom: 30px;
+ }
+ .developer .developer-img:hover .developer-img-effect{
+     opacity: 1;
+     visibility:visible;
+     margin: 20px;
+ }
+  .developer-effect .developer-img-effect .facebook:hover,
+  .developer-effect .developer-img-effect .instagram:hover,
+  .developer-effect .developer-img-effect .twitter:hover{
+     color: rgb(0, 0, 0);
+ }
+ /*-------------------end section web developer --------*/
+.section-img ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-img ul li{
+    position: relative;
+}
+.section-img img{
+    width: 300px;
+    height: 250px;
+    margin: 16.5px;
+    border:1px solid #e8e8e8;
+    border-radius:3px ;
+}
+.section-img ul li .layer{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition:opacity 1s ;
+}
+.section-img ul li:hover .layer{
+    opacity: 1;
+    visibility: visible;
+}
+.section-img ul li .layer .layer-info{
+    text-align: center;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.section-img ul li .layer .layer-info span{
+    color: rgb(0, 64, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.section-img ul li .layer .layer-info h3{
+    margin-bottom: 10px;
+    color: rgb(243, 240, 240);
+}
+.section-img ul li .layer .layer-info a i{
+    color: rgb(255, 255, 255);
+    display:inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: royalblue;
+    margin: 3px;
+    border-radius: 4px;
+}
+/*-------------------End section featured works----------*/
+/*-------------------Start section home-img----------*/
+body .home-img{
+    height: 250px;
+    margin-top: 70px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-image:url(../images/background/background2.webp);
+}
+
+.home-img .container ul{
+    list-style: none;
+    display: flex;
+    width:inherit;
+    height:250px;
+}
+.home-img .container ul li{
+    margin: auto;
+    text-align: center;
+    height: 100px;
+}
+.home-img .container ul li i{
+    color: blue;
+}
+.home-img .container ul li .number{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+.home-img .container ul li .word{
+color: rgb(255, 255, 255);
+letter-spacing: 2px;
+font-size: 13px;
+font-weight: bold;
+}
+.home-img .container ul li i ,
+.home-img .container ul li .number{
+    margin-bottom: 5px;
+}
+/*-------------------End section home-img----------*/
+/*-------------------Start section pricing----------*/
+.container-section .pricing{
+    height: 300px;
+    position: relative;
+    width: 300px;
+    border: 1px solid rgb(228 225 225);
+    margin:0px 25px 0px 25px;
+    text-align: center;
+}
+.container-section .pricing h1{
+    font-size: 13px;
+    margin:15px 0 10px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition: color 0.9s;
+}
+.container-section .pricing .month{
+    font-size: 35px;
+    font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 50%;
+    height: 75px;
+    padding-top:5px;
+    transition: color 0.9s;
+    margin: 0 100px 20px 100px ;
+}
+.container-section .pricing .month span{
+    display:block;
+    font-size: 16px;
+}
+.container-section .pricing .pricing-ifo span{
+    display: block;
+    margin-bottom: 5px;
+    color:rgb(110, 106, 106);
+    transition: color 0.9s;
+}
+.container-section .pricing button{
+    margin-top: 10px;
+    background:none;
+    border: 1px solid blue;
+    width: 115x;
+    height: 35px;
+    padding: 10px;
+}
+.container-section .pricing button a{
+    text-decoration: none;
+    color: blue;
+}
+.pricing-effect{
+position: relative;
+}
+.pricing-effect:after{
+position: absolute;
+content: "";
+background:rgb(0, 0, 0);
+width: 100%;
+height: 0;
+bottom: 0;
+right: 0;
+top: 0;
+left: 0;
+z-index:-1;
+transition: height 0.9s;
+}
+.pricing-effect:hover:after{
+ height:100%;
+}
+.container-section .pricing:hover h1{
+    color: blue;
+}
+.container-section .pricing:hover .month{
+    color: white;
+}
+.container-section .pricing:hover .pricing-ifo span{
+    color: rgb(248, 240, 240);
+}
+/*-------------------End section pricing----------*/
+ /*------------------Start section get in touch--------*/
+.container-section .get-in-touch{
+    width: inherit;
+    display:flex;
+    justify-content: space-between;
+
+}
+.container-section .get{
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border:1px solid #e6e4e4;
+    margin-bottom: 20px;
+}
+.container-section .get i{
+    color: blue;
+    margin: 10px 0 10px 0;
+}
+.container-section .get h2,
+.container-section .get p{
+    margin-bottom: 10px;
+    transition:color 0.5s ;
+    text-transform:capitalize;
+}
+.container-section .get:hover h2,
+.container-section .get:hover p{
+    color: white;
+}
+.container-section form{
+    width: 700px;
+    margin: auto;
+}
+.container-section form .name{
+    margin-right:15px;
+}
+.container-section form .name,
+.container-section form .email
+{
+    width: 340px;
+    height: 40px;
+    border: 3px solid  rgba(30, 30, 218,0.9);
+}
+.container-section form .subject,
+.container-section form .message{
+    display: block;
+    margin-top:30px;
+    height: 40px;
+    width:inherit;
+    border: 3px solid  rgba(30, 30, 218,0.9);
+}
+.container-section form button{
+    width: 150px;
+    height: 30px;
+    display: block;
+    margin: 20px auto 10px auto;
+    background-color: rgba(30, 30, 218,0.9);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
